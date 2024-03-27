@@ -35,12 +35,14 @@ return require('packer').startup(function(use)
 		end
 	})
 
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use {
+        'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'
+    }
 
-	use('nvim-lua/plenary.nvim')
-	use('ThePrimeagen/harpoon')
-	use('mbbill/undotree')
-	use('tpope/vim-fugitive')
+	use 'nvim-lua/plenary.nvim'
+	use 'ThePrimeagen/harpoon'
+	use 'mbbill/undotree'
+	use 'tpope/vim-fugitive'
 	
     use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -64,4 +66,7 @@ return require('packer').startup(function(use)
     if packer_bootstrap then
         require('packer').sync()
     end
+
+    use 'lewis6991/gitsigns.nvim'
+    use 'goolord/alpha-nvim' 
 end)
