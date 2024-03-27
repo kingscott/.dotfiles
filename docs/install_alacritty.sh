@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Setup base .config files
-if [ -d "~/.config/alacritty" ]; then
-    mdkir ~/.config/alacritty
+if [ ! -d "~/.config/alacritty" ]; then
+    mkdir ~/.config/alacritty
 fi
 cd ~/.config/alacritty
 
 # Grab zip file of nvim configs from hosted site
-wget https://kingscott.github.io/.dotfiles/alacritty.zip .
+wget https://kingscott.github.io/.dotfiles/alacritty.zip
 unzip alacritty.zip 
 rm alacritty.zip 
 
