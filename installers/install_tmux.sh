@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Setup base .config files
-if ! [ -d "~/.tmux/" ]; then
-    mdkir ~/.tmux/
+if [ ! -d "~/.tmux/" ]; then
+    mkdir ~/.tmux/
 fi
 cd ~/.tmux/
 
 # Grab zip file of nvim configs from hosted site
-wget https://kingscott.github.io/.dotfiles/tmux.zip .
+wget https://kingscott.github.io/.dotfiles/tmux.zip
 unzip tmux.zip 
 rm tmux.zip 
 
