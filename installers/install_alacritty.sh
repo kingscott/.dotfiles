@@ -16,3 +16,5 @@ cp -r ./alacritty/ ./
 rm -r ./alacritty
 
 echo "Alacritty configs are successfully installed."
+cd 
+rm -- "$0"
