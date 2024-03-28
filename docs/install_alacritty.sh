@@ -13,4 +13,8 @@ rm alacritty.zip
 
 # Copy files downloaded from repo to local config directory (~/.config)
 cp -r ./alacritty/ ./ 
+rm -r ./alacritty
 
+echo "Alacritty configs are successfully installed."
+cd 
+rm -- "$0"
