@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Setup base .config files
+# Setup base .config files for first-time installation
 if [ ! -d "~/.tmux/" ]; then
     mkdir ~/.tmux/
 fi
+
 cd ~/.tmux/
 
 # Grab zip file of nvim configs from hosted site
@@ -12,10 +13,11 @@ unzip tmux.zip
 rm tmux.zip 
 
 # Setup tmux conf
-mv ./tmux.conf ~/.tmux.conf
+mv tmux/tmux.conf ~/.tmux.conf
 
-# Copy files downloaded from repo to local config directory (~/.config)
-cp -r ./tmux/ ./ 
+# Copy tmux layouts
+mv ./tmux/layouts/ ./plugins/tmuxifier/
+rm -r ./tmux
 
 # Open tmux to finish install:
-echo "Please open tmux to finish the install by entering Ctrl + I and Ctrl + U".
+echo "Please open tmux to finish the installation by entering Ctrl + I and Ctrl + U."

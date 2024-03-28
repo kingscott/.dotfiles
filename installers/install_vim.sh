@@ -19,3 +19,5 @@ cp -r ./nvim/ ./
 # From the packer docs:
 # You can also use the following command (with packer bootstrapped) to have packer setup your configuration (or simply run updates) and close once all operations are completed:
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+echo "Neovim configs are successfully installed."
