@@ -21,3 +21,5 @@ cp -r ./nvim/ ./
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 echo "Neovim configs are successfully installed."
+cd
+rm -- "$0"
