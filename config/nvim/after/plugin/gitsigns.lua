@@ -1,4 +1,6 @@
-require('gitsigns').setup()
+require('gitsigns').setup({
+  current_line_blame = true,
+})
 vim.keymap.set("n", "<leader>gp", function() 
     vim.cmd.Gitsigns("preview_hunk")
 end)
